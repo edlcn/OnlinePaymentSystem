@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deposit
+spec:
+  selector:
+    matchLabels:
+      app: deposit
+  template:
+    metadata:
+      labels:
+        app: deposit
+    spec:
+      containers:
+      - name: deposit
+        image: deposit:v2
+        imagePullPolicy: "Never"
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: deposit
+spec:
+  selector:
+    app: deposit
+  ports:
+  - port: 8080
+    targetPort: 8080
+    
+

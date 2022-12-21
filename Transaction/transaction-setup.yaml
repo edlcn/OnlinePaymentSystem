@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: transaction
+spec:
+  selector:
+    matchLabels:
+      app: transaction
+  template:
+    metadata:
+      labels:
+        app: transaction
+    spec:
+      containers:
+      - name: transaction
+        image: transaction:latest
+        imagePullPolicy: "Never"
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: transaction
+spec:
+  selector:
+    app: transaction
+  ports:
+  - port: 8080
+    targetPort: 8080
+    
+

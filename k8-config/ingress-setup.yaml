@@ -1,0 +1,84 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myingress
+  labels:
+    name: myingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: mkb.express.edlcn
+    http:
+      paths:
+      - path: /api/v1/users/classified
+        pathType: Prefix
+        backend:
+          service:
+            name: not-found
+            port:
+              number: 8080
+      - path: /api/v1/payment
+        pathType: Prefix
+        backend:
+          service:
+            name: payment
+            port: 
+              number: 8080
+      - path: /api/v1/cards
+        pathType: Prefix
+        backend:
+          service:
+            name: credit-card
+            port: 
+              number: 8080
+      - path: /api/v1/users
+        pathType: Prefix
+        backend:
+          service:
+            name: users
+            port: 
+              number: 8080
+      - path: /classified/ccdb
+        pathType: Prefix
+        backend:
+          service:
+            name: credit-card-db
+            port: 
+              number: 8080
+      - path: /api/v1/deposit
+        pathType: Prefix
+        backend:
+          service:
+            name: deposit
+            port: 
+              number: 8080
+      - path: /api/v1/transaction
+        pathType: Prefix
+        backend:
+          service:
+            name: transaction
+            port: 
+              number: 8080
+      - path: /validate
+        pathType: Prefix
+        backend:
+          service:
+            name: users
+            port: 
+              number: 8080
+      - path: /api/v1/merchant
+        pathType: Prefix
+        backend:
+          service:
+            name: merchant
+            port: 
+              number: 8080
+      - path: /api/v1/merchantPayment
+        pathType: Prefix
+        backend:
+          service:
+            name: payment
+            port: 
+              number: 8080
+
+

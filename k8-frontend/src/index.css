@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+.navbar {
+  
+  padding: 5px;
+  background-color: lightblue;
+  display: flex;
+  
+}
+
+.navbar h1{
+  color: lightslategray;
+}
+
+.formf {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 400px;
+  padding: 10px;
+}
+
+.formf label {
+  
+  display: block;
+  text-align: left;
+  
+}
+
+.formf button {
+  background-color: cornflowerblue;
+  border: 0;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.formf input,select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 2px solid cornflowerblue;
+  box-sizing: border-box;
+  display: block;
+  
+}
+
+.formf .cost {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+}
+
+
+.links {
+  display: flex;
+  margin-left: auto;
+  margin-top: 5px;
+  
+  
+}
+
+.links a{
+  margin-left: 20px;
+  margin-right: 10px;
+  
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 10px;
+  
+  background-color: yellow;
+  
+}
+
+.links .balance {
+  margin-left: 20px;
+  margin-right: 10px;
+  
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 10px;
+  
+  background-color: yellow;
+}
+
+.links button {
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  border: none;
+
+}
+
+.links button:hover{
+  background-color: lightblue;
+}
+
+
+
+.navbar a:hover{
+  background-color: lightblue;
+}
+
+.card-list{
+  display: flex;
+  text-align: center;
+}
+
+.card-preview{
+  max-width: 400px;
+  padding: 10px 16px;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+
+}
+
+.card-preview-active {
+  border: 2px solid lightblue;
+}
+
+.card-preview:hover {
+  box-shadow: 0px 8px 16px rgba(30, 50, 80, 0.1);
+  border: 2px solid lightblue;
+  cursor: pointer;
+}
+
+
+
+.my-cards {
+  text-align: center;
+}
+
+.my-cards button {
+  background-color: cornflowerblue;
+  border: 0;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+
+.table,th,td {
+  padding: 5px 5px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+td {
+  text-align: center;
+}
+
+
+.card-preview button {
+  
+  color: red;
+  padding: 0;
+  border-radius: 0;
+  background:none;
+  font-size: 25px;
+  float: right;
+  
+  
+}
+
+
+
+
